@@ -10,11 +10,5 @@ data class MallardDuck(
     override val quackBehaviour: QuackBehaviour = Quack()
 ) : Duck {
     override fun display(): String = "I'm a real Mallard duck"
-
-    override fun updateFlyBehaviour(flyBehaviour: FlyBehaviour): Duck =
-        this.copy(flyBehaviour = flyBehaviour)
-
-    override fun updateQuackBehaviour(quackBehaviour: QuackBehaviour): Duck =
-        this.copy(quackBehaviour = quackBehaviour)
 }
 
