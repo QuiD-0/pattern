@@ -6,9 +6,13 @@ import strategy.order.shippingPolicy.ShipShipping
 import strategy.order.shippingPolicy.ShippingPolicy
 
 data class OverseasOrder(
-    override val originPrice: Double,
-    override var discountPolicy: DiscountPolicy = NoDiscount(),
-    override var shippingPolicy: ShippingPolicy = ShipShipping
+    val originPrice: Double,
+    val discountPolicy: DiscountPolicy = NoDiscount(),
+    val shippingPolicy: ShippingPolicy = ShipShipping
 ) : Order {
-    override var totalPrice: Double = discountPolicy.applyDiscount(originPrice)
+    var totalPrice: Double = discountPolicy.applyDiscount(originPrice)
+
+    override fun updateDiscountPolicy(policy: DiscountPolicy): OverseasOrder = copy(discountPolicy = policy)
+
+    override fun updateShippingType(policy: ShippingPolicy): OverseasOrder = copy(shippingPolicy = policy)
 }

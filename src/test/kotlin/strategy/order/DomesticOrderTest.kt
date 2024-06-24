@@ -15,24 +15,24 @@ class DomesticOrderTest{
     @Test
     fun percentDiscountPolicy(){
         val domesticOrder = DomesticOrder(100.0)
-        domesticOrder.updateDiscountPolicy(PercentDiscount(20))
-        assertEquals(80.0, domesticOrder.totalPrice)
+        val updateDiscountPolicy = domesticOrder.updateDiscountPolicy(PercentDiscount(20))
+        assertEquals(80.0, updateDiscountPolicy.totalPrice)
     }
 
     @Test
     fun fixAmountDiscountPolicy(){
         val domesticOrder = DomesticOrder(100.0)
-        domesticOrder.updateDiscountPolicy(PercentDiscount(20))
-        assertEquals(80.0, domesticOrder.totalPrice)
+        val updateDiscountPolicy = domesticOrder.updateDiscountPolicy(PercentDiscount(20))
+        assertEquals(80.0, updateDiscountPolicy.totalPrice)
     }
 
     @Test
     fun changeDiscountPolicy(){
         val domesticOrder = DomesticOrder(100.0)
-        domesticOrder.updateDiscountPolicy(PercentDiscount(20))
-        assertEquals(80.0, domesticOrder.totalPrice)
-        domesticOrder.updateDiscountPolicy(PercentDiscount(30))
-        assertEquals(70.0, domesticOrder.totalPrice)
+        val updateDiscountPolicy1 = domesticOrder.updateDiscountPolicy(PercentDiscount(20))
+        assertEquals(80.0, updateDiscountPolicy1.totalPrice)
+        val updateDiscountPolicy2 = domesticOrder.updateDiscountPolicy(PercentDiscount(30))
+        assertEquals(70.0, updateDiscountPolicy2.totalPrice)
     }
 
 }
