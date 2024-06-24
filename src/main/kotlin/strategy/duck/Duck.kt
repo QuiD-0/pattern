@@ -1,7 +1,7 @@
-package strategy
+package strategy.duck
 
-import strategy.fly.FlyBehaviour
-import strategy.quack.QuackBehaviour
+import strategy.duck.fly.FlyBehaviour
+import strategy.duck.quack.QuackBehaviour
 
 sealed interface Duck {
     val quackBehaviour: QuackBehaviour

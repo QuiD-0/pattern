@@ -2,8 +2,10 @@ package strategy
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import strategy.fly.Rocket
-import strategy.quack.Mute
+import strategy.duck.DecoyDuck
+import strategy.duck.MallardDuck
+import strategy.duck.fly.Rocket
+import strategy.duck.quack.Mute
 
 class DuckTest{
 

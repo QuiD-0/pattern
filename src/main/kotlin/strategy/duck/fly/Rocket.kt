@@ -1,4 +1,4 @@
-package strategy.fly
+package strategy.duck.fly
 
 class Rocket : FlyBehaviour {
     override fun fly() {

@@ -1,4 +1,4 @@
-package strategy.quack
+package strategy.duck.quack
 
 interface QuackBehaviour {
     fun quack()

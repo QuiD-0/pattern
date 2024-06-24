@@ -1,9 +1,9 @@
-package strategy
+package strategy.duck
 
-import strategy.fly.FlyBehaviour
-import strategy.fly.Wing
-import strategy.quack.Quack
-import strategy.quack.QuackBehaviour
+import strategy.duck.fly.FlyBehaviour
+import strategy.duck.fly.Wing
+import strategy.duck.quack.Quack
+import strategy.duck.quack.QuackBehaviour
 
 data class MallardDuck(
     override val flyBehaviour: FlyBehaviour = Wing(),

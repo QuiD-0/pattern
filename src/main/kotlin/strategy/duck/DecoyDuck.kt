@@ -1,9 +1,9 @@
-package strategy
+package strategy.duck
 
-import strategy.fly.FlyBehaviour
-import strategy.fly.FlyNoWay
-import strategy.quack.Mute
-import strategy.quack.QuackBehaviour
+import strategy.duck.fly.FlyBehaviour
+import strategy.duck.fly.FlyNoWay
+import strategy.duck.quack.Mute
+import strategy.duck.quack.QuackBehaviour
 
 data class DecoyDuck(
     override val flyBehaviour: FlyBehaviour = FlyNoWay(),
