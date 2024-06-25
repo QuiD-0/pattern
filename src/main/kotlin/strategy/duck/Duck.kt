@@ -3,33 +3,16 @@ package strategy.duck
 import strategy.duck.fly.FlyBehaviour
 import strategy.duck.quack.QuackBehaviour
 
-sealed interface Duck {
-    val quackBehaviour: QuackBehaviour
-    val flyBehaviour: FlyBehaviour
-
+interface Duck {
     fun display(): String
 
-    fun fly() {
-        flyBehaviour.fly()
-    }
+    fun fly()
 
-    fun quack() {
-        quackBehaviour.quack()
-    }
+    fun quack()
 
-    fun swim() {
-        println("All ducks float, even decoys!")
-    }
+    fun swim()
 
-    fun updateFlyBehaviour(flyBehaviour: FlyBehaviour): Duck =
-        when (this) {
-            is MallardDuck -> this.copy(flyBehaviour = flyBehaviour)
-            is DecoyDuck -> this.copy(flyBehaviour = flyBehaviour)
-        }
+    fun updateFlyBehaviour(flyBehaviour: FlyBehaviour): Duck
 
-    fun updateQuackBehaviour(quackBehaviour: QuackBehaviour): Duck =
-        when (this) {
-            is MallardDuck -> this.copy(quackBehaviour = quackBehaviour)
-            is DecoyDuck -> this.copy(quackBehaviour = quackBehaviour)
-        }
+    fun updateQuackBehaviour(quackBehaviour: QuackBehaviour): Duck
 }
