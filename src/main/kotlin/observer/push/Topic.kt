@@ -1,4 +1,4 @@
-package observer
+package observer.push
 
 interface Topic {
     fun subscribe(observer: Observer)

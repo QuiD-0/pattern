@@ -1,5 +1,7 @@
 package observer
 
+import observer.push.CurrentConditionsDisplay
+import observer.push.WeatherData
 import org.junit.jupiter.api.Test
 
 class SubscribeTest {
