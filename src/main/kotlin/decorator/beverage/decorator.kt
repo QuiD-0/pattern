@@ -1,4 +1,4 @@
-package decorator
+package decorator.beverage
 
 data class Mocha(private val beverage: Beverage) : Beverage {
     override fun cost(): Double = beverage.cost() + 0.20

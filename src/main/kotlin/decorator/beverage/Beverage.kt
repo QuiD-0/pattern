@@ -1,4 +1,4 @@
-package decorator
+package decorator.beverage
 
 interface Beverage {
     fun cost(): Double

@@ -1,5 +1,9 @@
 package decorator
 
+import decorator.beverage.Caramel
+import decorator.beverage.Espresso
+import decorator.beverage.HouseBlend
+import decorator.beverage.Mocha
 import org.junit.jupiter.api.Test
 
 class DecoratorTest {
