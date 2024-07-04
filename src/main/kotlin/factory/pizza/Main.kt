@@ -1,9 +1,9 @@
 package factory.pizza
 
 fun main() {
-    val nyStore = PizzaStore(NYPizzaFactory)
+    val nyStore = NYPizzaStore()
     nyStore.orderPizza(Type.CHEESE)
 
-    val simpleStore = PizzaStore(SimpleFactory)
+    val simpleStore = KoreaPizzaStore()
     simpleStore.orderPizza(Type.PEPPERONI)
 }
