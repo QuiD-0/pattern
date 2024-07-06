@@ -1,8 +1,9 @@
 package factory.pizza.factory.korea
 
 import factory.pizza.Pizza
+import factory.pizza.ingredient.IngredientFactory
 
-data object VeggiePizza : Pizza {
+data class VeggiePizza(override val ingredientFactory: IngredientFactory) : Pizza {
     override fun prepare() {
         println("Preparing veggie pizza")
     }

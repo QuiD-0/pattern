@@ -2,19 +2,15 @@ package factory.pizza
 
 import factory.pizza.factory.KoreaFactory
 import factory.pizza.factory.NYPizzaFactory
-import factory.pizza.factory.PizzaFactory
-import factory.pizza.ingredient.KoreaIngredientFactory
-import factory.pizza.ingredient.NYIngredientFactory
 
 interface PizzaStore {
     fun orderPizza(type: Type): Pizza
 }
 
-class KoreaPizzaStore {
+class KoreaPizzaStore : PizzaStore {
     private val factory = KoreaFactory
-    private val ingredientFactory = KoreaIngredientFactory
 
-    fun orderPizza(type: Type): Pizza {
+    override fun orderPizza(type: Type): Pizza {
         val pizza = factory.createPizza(type)
         pizza.prepare()
         pizza.bake()
@@ -24,11 +20,10 @@ class KoreaPizzaStore {
     }
 }
 
-class NYPizzaStore {
+class NYPizzaStore : PizzaStore {
     private val factory = NYPizzaFactory
-    private val ingredientFactory = NYIngredientFactory
 
-    fun orderPizza(type: Type): Pizza {
+    override fun orderPizza(type: Type): Pizza {
         val pizza = factory.createPizza(type)
         pizza.prepare()
         pizza.bake()

@@ -1,14 +1,21 @@
 package factory.pizza.factory.korea
 
 import factory.pizza.Pizza
+import factory.pizza.ingredient.IngredientFactory
 
-data object CheesePizza : Pizza {
+data class CheesePizza(
+    override val ingredientFactory: IngredientFactory
+) : Pizza {
+
     override fun prepare() {
-        println("Preparing cheese pizza")
+        println("Preparing pizza")
+        println("Adding ${ingredientFactory.createDough()}")
+        println("Adding ${ingredientFactory.createSauce()}")
+        println("Adding ${ingredientFactory.createCheese()}")
     }
 
     override fun bake() {
-        println("Baking cheese pizza")
+        println("Baking  pizza")
     }
 
     override fun cut() {

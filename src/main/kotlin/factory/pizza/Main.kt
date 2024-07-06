@@ -4,6 +4,6 @@ fun main() {
     val nyStore = NYPizzaStore()
     nyStore.orderPizza(Type.CHEESE)
 
-    val simpleStore = KoreaPizzaStore()
-    simpleStore.orderPizza(Type.PEPPERONI)
+    val koreaStore = KoreaPizzaStore()
+    koreaStore.orderPizza(Type.PEPPERONI)
 }
