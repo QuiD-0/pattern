@@ -1,9 +1,7 @@
 package command.shortcut.executor
 
-import command.shortcut.ShortCutHistory
-
-class CmdZ(private val history: ShortCutHistory): ShortcutExecutor {
+object CmdZ : ShortcutExecutor{
     override fun execute() {
-        println("Undo: ${history.getLast()}")
+        println("Cmd + Z")
     }
 }

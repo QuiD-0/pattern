@@ -8,17 +8,16 @@ class KeyboardTest {
 
     @Test
     fun testPressShortCut() {
-
         val shortCutHistory = ShortCutHistory()
 
-        val keyboard = Keyboard {
+        val keyboard = Keyboard(shortCutHistory) {
             when (it) {
-                CMD_C -> CmdC(shortCutHistory)
-                CMD_Z -> CmdZ(shortCutHistory)
-                CMD_V -> CmdV(shortCutHistory)
-                CMD_X -> CmdX(shortCutHistory)
-                SHIFT_INSERT -> ShiftInsert(shortCutHistory)
-                SHIFT_DELETE -> ShiftDelete(shortCutHistory)
+                CMD_C -> CmdC
+                CMD_Z -> CmdZ
+                CMD_V -> CmdV
+                CMD_X -> CmdX
+                SHIFT_INSERT -> ShiftInsert
+                SHIFT_DELETE -> ShiftDelete
             }
         }
         keyboard.pressShortCut(CMD_C)
