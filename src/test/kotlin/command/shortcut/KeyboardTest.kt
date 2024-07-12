@@ -20,11 +20,8 @@ class KeyboardTest {
                 SHIFT_DELETE -> ShiftDelete
             }
         }
-        keyboard.pressShortCut(CMD_C)
-        keyboard.pressShortCut(CMD_V)
-        keyboard.pressShortCut(CMD_X)
-        keyboard.pressShortCut(CMD_Z)
-        keyboard.pressShortCut(SHIFT_INSERT)
-        keyboard.pressShortCut(SHIFT_DELETE)
+
+        listOf(CMD_C, CMD_V, CMD_X, CMD_Z, CMD_Z, CMD_Z, CMD_Z, SHIFT_INSERT, CMD_Z, SHIFT_DELETE)
+            .forEach(keyboard::pressShortCut)
     }
 }

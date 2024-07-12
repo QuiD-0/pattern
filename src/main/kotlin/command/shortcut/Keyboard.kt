@@ -1,5 +1,6 @@
 package command.shortcut
 
+import command.shortcut.KnownShortCut.*
 import command.shortcut.executor.ShortcutExecutor
 
 class Keyboard(
@@ -7,8 +8,8 @@ class Keyboard(
     private val command: (shortCut: KnownShortCut) -> ShortcutExecutor
 ) {
     fun pressShortCut(shortCut: KnownShortCut) {
-        if (shortCut == KnownShortCut.CMD_Z) {
-            val last = history.getLast()
+        if (shortCut == CMD_Z) {
+            val last = history.getLast() ?: return
             command(last).execute()
         } else {
             command(shortCut).execute()

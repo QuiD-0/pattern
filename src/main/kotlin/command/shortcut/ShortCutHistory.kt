@@ -12,6 +12,6 @@ class ShortCutHistory(private val size: Int = 10) {
         history.add(shortCut)
     }
 
-    fun getLast(): KnownShortCut = history.peekLast()
+    fun getLast(): KnownShortCut? = history.pollLast()
 
 }
