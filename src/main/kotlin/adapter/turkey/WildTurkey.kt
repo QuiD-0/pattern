@@ -1,4 +1,4 @@
-package adapter
+package adapter.turkey
 
 class WildTurkey : Turkey {
     override fun gobble() {

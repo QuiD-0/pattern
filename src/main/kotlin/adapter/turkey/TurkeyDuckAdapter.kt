@@ -1,4 +1,4 @@
-package adapter
+package adapter.turkey
 
 import strategy.duck.Duck
 import strategy.duck.fly.FlyBehaviour

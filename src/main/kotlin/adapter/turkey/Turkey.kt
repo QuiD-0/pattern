@@ -1,4 +1,4 @@
-package adapter
+package adapter.turkey
 
 interface Turkey {
     fun gobble()
